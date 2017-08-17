@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Web.UI;
-using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using Owin;
-using Store.Models;
 
 namespace Store.Account
 {
@@ -38,6 +35,10 @@ namespace Store.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
+                        Store.Logic.ShoppingCartActions usersShoppingCart = new Store.Logic.ShoppingCartActions();
+                        String cartId = usersShoppingCart.GetCartId();
+                        usersShoppingCart.MigrateCart(cartId, Email.Text);
+
                         IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                         break;
                     case SignInStatus.LockedOut:

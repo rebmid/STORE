@@ -5,7 +5,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
-using Microsoft.Owin.Security.Google;
+
 using Owin;
 using Store.Models;
 
@@ -48,21 +48,21 @@ namespace Store
 
             // Uncomment the following lines to enable logging in with third party login providers
             //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+              //  clientId: "",
+                //clientSecret: "");
 
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
             //   consumerSecret: "");
 
             //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+              // appId: "",
+              // appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+           // app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
-            //    ClientId = "",
-            //    ClientSecret = ""
+              //  ClientId = "951009534065-5h6hphu88rh2tie52q85ce7v9kh14b3e.apps.googleusercontent.com",
+                //ClientSecret = "LgTqQYZoK7XYdMODNqtv8S9S"
             //});
         }
     }
